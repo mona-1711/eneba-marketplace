@@ -66,3 +66,20 @@ Tool: Claude Code (cloud agent) working inside a Claude project. Date: 2026-11-2
 > installed
 
 *Agent: added the Dockerfile (node build → go build → alpine runtime), the `render.yaml` blueprint, this log and the README, then committed and pushed.*
+
+### Response 6 (agent)
+> The app is built and pushed to mona-1711/eneba-marketplace. The only thing left is deploying it, and that has to be done from your Render account:
+> 1. Open https://render.com/deploy?repo=https://github.com/mona-1711/eneba-marketplace
+> 2. Sign in with GitHub, keep the Free plan, and click Apply.
+> 3. The first build takes about 5 to 10 minutes. When it's done, send me the `onrender.com` URL. I'll check the live site and add the URL to the README and chat log.
+>
+> Checks: the backend tests pass, and I clicked through the whole flow in a browser (typo search, product, cart, sign-up, a declined card, a successful payment, then revealing the key). I couldn't build the Docker image in my environment because Docker isn't available there, so Render's build will be its first real run.
+>
+> What's in it: everything the brief asks for. The homepage blocks all come from backend data, search copes with typos ("eldn rnig" finds Elden Ring), product pages compare offers from several sellers, and checkout delivers a key. The README explains the scope decisions, and this chat log is in `docs/agent-chat-log.md`.
+>
+> Things to know before you present it: the app is called "keyport" because it copies Eneba's look but not its logo. Accounts and orders are stored in SQLite on Render's free disk, so they're wiped whenever the service restarts, though the catalog comes back automatically. Test card: `4242 4242 4242 4242`, any future expiry date, any CVC.
+
+### Prompt 7 (Bramos)
+> *(screenshot of the Render dashboard showing the service as Live)*
+
+*Agent: the deploy is live at https://keyport-marketplace.onrender.com. My cloud environment's network policy blocks onrender.com, so I checked the live site through the browser built into the Claude desktop app instead. The free-tier service had to wake up first (a 503 page while it started), and then the API and pages answered. I added the live URL to the README.*

@@ -2,7 +2,7 @@
 
 A marketplace for digital game keys, gift cards and subscriptions, built for the Eneba Intern Assignment 2027. It's a React + TypeScript frontend on a Go REST API with SQLite, shipped as one Docker image.
 
-- **Live demo:** _(Render URL, added after deploy)_
+- **Live demo:** https://keyport-marketplace.onrender.com (Render free tier: the first request after ~15 min idle takes up to a minute to wake the service)
 - **Agent chat history:** [`docs/agent-chat-log.md`](docs/agent-chat-log.md)
 
 **Test card:** `4242 4242 4242 4242`, any future expiry, any CVC. Use `4000 0000 0000 0002` to see a declined card.
