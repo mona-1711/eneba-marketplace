@@ -4,3 +4,4 @@ dist/
 *.db-*
 backend/marketplace
 .DS_Store
+*.tsbuildinfo
