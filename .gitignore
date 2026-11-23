@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.db
+*.db-*
+backend/marketplace
+.DS_Store
